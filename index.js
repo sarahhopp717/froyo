@@ -11,9 +11,9 @@ console.log(result.split(","));
 //
 //
 //
+let flavorCounts = {};
 
 if (result) {
-  let flavorCounts = {};
   for (let i = 0; i < flavorsArray.length; ++i) {
     let flavor = flavorsArray[i];
     if (flavorCounts[flavor]) {
@@ -23,4 +23,20 @@ if (result) {
     }
   }
   console.log(flavorCounts);
+}
+
+//
+//
+//
+
+function countFrequencies(flavorsArray) {
+  for (let i = 0; i < flavorsArray.length; ++i) {
+    let flavor = flavorsArray[i];
+    if (flavorCounts[flavor]) {
+      flavorCounts[flavor]++;
+    } else {
+      flavorCounts[flavor] = 1;
+    }
+  }
+  return flavorCounts;
 }
