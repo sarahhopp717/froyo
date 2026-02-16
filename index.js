@@ -11,4 +11,16 @@ console.log(result.split(","));
 //
 //
 //
-let flavorCount = {};
+
+if (result) {
+  let flavorCounts = {};
+  for (let i = 0; i < flavorsArray.length; ++i) {
+    let flavor = flavorsArray[i];
+    if (flavorCounts[flavor]) {
+      flavorCounts[flavor]++;
+    } else {
+      flavorCounts[flavor] = 1;
+    }
+  }
+  console.log(flavorCounts);
+}
